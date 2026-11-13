@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/filter/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ツアマスカードアルバム (その他)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/others/base_others.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <div id="scaleWrapper">
+    <main>
+        <!-- コレクションファイル -->
+        <section id="binder">
+            <!-- 左ページ -->
+            <div class="page leftPage">
+                <div id="leftCards" class="cardGrid">
+                </div>
+            </div>
+            <!-- 綴じ部分 -->
+            <div id="binderCenter"></div>
+            <!-- 右ページ -->
+            <div class="page rightPage">
+                <div id="rightCards" class="cardGrid">
+                </div>
+            </div>
+        </section>
+        <!-- ページ送り -->
+        <div id="pageControls">
+            <!-- 前ページ -->
+            <button id="prevPage" class="pageButton">
+                ◀
+            </button>
+            <!-- ページ番号 -->
+            <div id="pageNumber">
+                1 / 1
+            </div>
+            <!-- 次ページ -->
+            <button id="nextPage" class="pageButton">
+                ▶
+            </button>
+        </div>
+    </main>
+        <a href="index.html" class="moveButton">通常弾カードへ移動</a>
+        <p id="lastUpdate">
+        最終更新：2026年10月13日
+        </p>
+    </div>
+    <!-- 検索パネル -->
+    <aside id="searchArea">
+        <h2>
+            絞り込み
+            <span class="searchButtons">
+                <button id="numberToggle" class="searchButton">
+                    番号表示
+                </button>
+                <button id="resetSearch" class="searchButton">
+                    リセット
+                </button>
+            </span>
+        </h2>
+        <label>
+            収録弾
+            <div class="customSelect" data-filter="series">
+                <div class="customSelectSelected">
+                    すべて
+                </div>
+                <div class="customSelectOptions"></div>
+            </div>
+        </label>
+
+        <label>
+            レアリティ
+            <div class="customSelect" data-filter="rarity">
+                <div class="customSelectSelected">
+                    すべて
+                </div>
+                <div class="customSelectOptions"></div>
+            </div>
+        </label>
+
+        <label>
+            アイドル
+            <div class="customSelect" data-filter="character">
+                <div class="customSelectSelected">
+                    すべて
+                </div>
+                <div class="customSelectOptions"></div>
+            </div>
+        </label>
+
+        <label>
+            種類
+            <div class="customSelect" data-filter="type">
+                <div class="customSelectSelected">
+                    すべて
+                </div>
+                <div class="customSelectOptions"></div>
+            </div>
+        </label>
+
+        <label>
+            ジャンル
+            <div class="customSelect" data-filter="genre">
+                <div class="customSelectSelected">
+                    すべて
+                </div>
+                <div class="customSelectOptions"></div>
+            </div>
+        </label>
+
+        <label>
+            所持状況
+            <div class="customSelect" data-filter="owned">
+                <div class="customSelectSelected">
+                    すべて
+                </div>
+                <div class="customSelectOptions"></div>
+            </div>
+        </label>
+    </aside>
+    <!-- 詳細 -->
+    <div id="detailOverlay"></div>
+    <aside id="cardDetail" style="display:none;">
+        <h2>カード情報</h2>
+        <button id="closeDetail">
+            ×
+        </button>
+        <div id="detailImage"></div>
+        <table>
+            <tr>
+                <th>カード名</th>
+                <td id="detailName"></td>
+            </tr>
+            <tr>
+                <th>カード番号</th>
+                <td id="detailNumber"></td>
+            </tr>
+            <tr>
+                <th>収録弾</th>
+                <td id="detailSeries"></td>
+            </tr>
+            <tr>
+                <th>レアリティ</th>
+                <td id="detailRarity"></td>
+            </tr>
+            <tr>
+                <th>アイドル</th>
+                <td id="detailCharacter"></td>
+            </tr>
+            <tr>
+                <th>種類</th>
+                <td id="detailType"></td>
+            </tr>
+            <tr>
+                <th>ジャンル</th>
+                <td id="detailGenre"></td>
+            </tr>
+            <tr>
+                <th>所持状態</th>
+                <td id="detailOwned"></td>
+            </tr>
+        </table>
+    </aside>
+
+    <script src="js/others/data_others/others.js"></script>
+
+    <script src="js/others/cards_others.js"></script>
+
+
+    <script src="js/others/state_others.js"></script>
+    <script src="js/dataLoader.js"></script>
+    <script src="js/others/imageManager_others.js"></script>
+    <script src="js/others/renderer_others.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/cardDetail.js"></script>
+    <script src="js/searchToggle.js"></script>
+    <script src="js/scale.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
